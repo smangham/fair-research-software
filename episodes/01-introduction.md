@@ -140,6 +140,7 @@ On the other hand, formulas or macros in spreadsheets used to analyse data are c
 
 ![*Definition of "research software" from the FAIR4RS working group, image by the Netherlands eScience Center licensed under CC-BY 4.0*](https://github.com/esciencecenter-digital-skills/research-software-support/blob/611da359cbe1d04ecf056545ee07f977ae536273/modules/researchsoftware/media/definition.png?raw=true){alt='Quote: Research Software includes source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose. Software components (e.g., operating systems, libraries, dependencies, packages, scripts, etc.) that are used for research but were not created during or with a clear research intent should be considered software in research and not Research Software.'}
 
+
 In the [software survey conducted by the Software Sustainability Institute in 2014][ssi-survey-2014], 
 92% of researchers indicated they used some kind of software to aid or conduct their research.
 This was not limited to researchers from [computational science][computational-science] 
