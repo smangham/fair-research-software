@@ -563,7 +563,7 @@ can use the [choosealicense.com](https://choosealicense.com) website to help you
 ### Exercise: 
 ### License selection exercise 2
 
-Choose a license for your code and data from the pervious exercises.
+Choose a license for your code and data from the previous exercises.
 Discuss with your neighbour or the group your choice of license and
 reason for choosing it.
 
