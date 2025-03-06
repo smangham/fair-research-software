@@ -127,35 +127,32 @@ Unique persistent identifiers, such as **Digital Object Identifiers** (DOIs) pro
 and similar digital archiving services, and commits/tags/releases used by GitHub and similar code sharing platforms,
 help with findability and accessibility of your software, and can help you get credit for your work by providing citable references.
 
-### Tools for assessing FAIRness of software
+## Software and data used in this course
 
-Here are some tools that can check your software and provide an assessment of its FAIRness:
+We are going to follow a fairly typical experience of a new PhD or postdoc joining a research group. 
+They were emailed some data and analysis code bundled in a `.zip` archive and written by another group member 
+who worked on similar things but has since left the group. 
+They need to be able to install and run this code on their machine, check they can understand it and then adapt it to 
+their own project.
 
-- [FAIRsoft evaluator][fair-rs-evaluator]
-- [FAIR software test][fair-rs-test]
-- [`How FAIR is your software` - command line tool to evaluate a software repository's compliance with the FAIR principles][howfairis]
+As part of the [setup for this course](./index.html#astronaut-data-and-analysis-code), you should have downloaded a `.zip` archive containing the software project
+the new research team member was given. 
+Let's unzip this archive and inspect its content in VS Code. 
+The software project contains:
 
-### Tools and practices summary
+(1) a JSON file (`data.json`) - a snippet of which is shown below - with data on extra-vehicular activities 
+(EVAs or spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided by NASA 
+via its [Open Data Portal](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data))
+![JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose)](episodes/fig/astronaut-data-json-snippet.png){alt='JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose'}
+(2) a Python script (`my code v2.py`) containing some analysis.
+![A first few lines of a Python script](episodes/fig/astronaut-analysis-bad-code-screenshot.png){alt='A first few lines of a Python script used as example code for the episode'}
 
-The table below provides a summary of how different tools and practices help with the FAIR software principles.
+The code in the Python script does some common research tasks:
 
-| Tools and practices                                                                                  | Findable | Accessible | Interoperable | Reusable |
-|------------------------------------------------------------------------------------------------------|----------|------------|---------------| -------- |
-| Virtual development environments                                                                     |          |            |               | x        |
-| Integrated development environments (IDEs)                                                           |          |            |               | x        |
-| Command line terminals - automated and reproducible pipelines                                        |          |            | x             | x        |
-| Standard data exchange formats - e.g. for data exchange (CSV, YAML)                                  |          |            | x             | x        |
-| Communication protocols - Command Line Interface (CLI) or Application Programming Interface (API)    |          |            | x             | x        |
-| Version control tools                                                                                | x        |            |               |          |
-| Code testing & correctness                                                                           |          |            |               | x        |
-| Coding conventions                                                                                   |          |            |               | x        |
-| Code-level documentation (comments and docstrings, explaining functionality)                         |          |            |               | x        |
-| Project-level documentation & metadata (README, explaining functionality/installation/running, etc.) |          |            | x             | x        |
-| License - code sharing & reuse                                                                       |          |            |               | x        |
-| Citation - code reuse & credit                                                                       |          |            |               | x        |
-| Software repositories & registries                                                                   | x        | x          |               |          |
-| Unique persistent identifiers                                                                        | x        | x          |               |          |
-
+* Read in the data from the JSON file
+* Change the data from one data format to another and save to a file in the new format (CSV)
+* Perform some calculations to generate summary statistics about the data
+* Make a plot to visualise the data
 
 ## Checking your setup
 
