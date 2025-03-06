@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/699755985.svg)](https://zenodo.org/doi/10.5281/zenodo.12666088)
 
-# Software for open and reproducible research Course
+# Software practices for open and reproducible research
 
 This short course is teaching tools and practices for producing and sharing quality, 
 sustainable and [FAIR (Findable, Accessible, Interoperable and Reusable) research software](https://www.nature.com/articles/s41597-022-01710-x)

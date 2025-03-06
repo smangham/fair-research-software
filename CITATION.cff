@@ -2,10 +2,9 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Software for open and reproducible research Course
+title: Software practices for open and reproducible research
 message: >-
-  Course material for "Tools and Practices for FAIR Research
-  Software" training
+  Training material for the "Software practices for open and reproducible research" course
 type: dataset
 authors:
   - given-names: Sarah

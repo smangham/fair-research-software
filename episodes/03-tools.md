@@ -1,5 +1,5 @@
 ---
-title: "Tools and practices for FAIR research software development"
+title: "Tools and practices for research software development"
 teaching: 60
 exercises: 30
 ---
@@ -22,7 +22,7 @@ After completing this episode, participants should be able to:
 
 ## Tools and good practices
 
-There are various tools and practices that support the development of FAIR research software, contributing to each of 
+There are various tools and practices that support open and reproducible research, also contributing to each of 
 the four FAIR principles.
 These tools and practices work together, as no single tool or practice will fully address one principle, and conversely
 each one can contribute to multiple principles simultaneously.
