@@ -114,7 +114,7 @@ What about the commit messages do you find helpful or not?
 ### Understanding commit contents
 
 Below are the `diffs` of two commits. A `diff` shows the differences in a file (or files!) compared to the previous 
-commit in the history so you can what has changed. 
+commit in the history so you can see what has changed. 
 The lines that begin with `+`s represent additions, and the lines that begin with `-`s represent deletions. 
 Compare these two commit `diff`s. 
 Can you understand what the commit author was trying to achieve in each commit? 

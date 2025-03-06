@@ -7,7 +7,7 @@ title: Setup
 To go through the course material on your own or at a workshop, 
 you will need the following software installed and working correctly on your system:
 
-- [Command line tool](index.html#command-line-tool) (such as **Bash**, **Zsh** or **Git Bash**)  
+- [Command line tool](index.html#command-line-terminal) (such as **Bash**, **Zsh** or **Git Bash**)  
 - [Git version control program](index.html#git-version-control-program)
 - [GitHub account](index.html#github-account)
 - [Python 3](index.html#python-3-distribution)
@@ -333,7 +333,7 @@ You can also change the default command line terminal from the same drop down me
 You could also install the following VS Code extensions (from `View > Extensions` top-level menu) 
 to make your Git experience in VS Code better:
 
-- GitLense - Git Supercharged (adds a few nice additions to Git support in VS Code)
+- GitLens - Git Supercharged (adds a few nice additions to Git support in VS Code)
 - Git Graph (provides nice graphs and visualisations of a Git repository in VS Code)
 
 ![*GitLens and Git Graph extensions for VS Code*](fig/vscode-git-extensions.png){ alt-text="GitLens and Git Graph extensions for VS Code" .image-with-shadow }
