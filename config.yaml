@@ -11,7 +11,7 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'Tools and practices for FAIR research software' # FIXME
+title: 'Software practices for open and reproducible research' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2023-10-03 # FIXME
