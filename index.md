@@ -36,23 +36,17 @@ Please also make sure you have [all the required software](../index.html#setup) 
 
 After attending this training, you **will be able** to:
 
-- List challenges typically faced by researchers developing software and managing data for modern computational 
-research, including those commensurate with the FAIR (Findable, Accessible, Interoperable, Reusable) principles
-- Understand and use some tools and practices that can help make your research, data and software FAIR
-- Automate your research and enable replication of your research results by writing software to implement the 
-research methodology and assess if the code does what it intends to do via code testing
-- Share and version control your research software using Git and GitHub
-- Use best practices for developing FAIR research software - including writing readable code, 
-code documentation, licencing and citation
-- Use tools and techniques for collaborative and sustainable open software development and maintenance
+- List challenges typically faced by researchers developing software (and managing data) for modern computational, 
+reproducible research, including those commensurate with the FAIR (Findable, Accessible, Interoperable, Reusable) principles
+- Build on top of your existing knowledge of Python, Git and command line tools to enhance your research
+software development workflow with some good open and reproducible research software practices around 
+structuring, writing, documenting, testing, sharing and reusing code (including software licencing and citation)
 - Understand some ethical issues around research software development and usage and how our work impacts others
-- Build on top of your existing knowledge of Python, Git and command line tools and enhance your research 
-software development workflow with some good practices around structuring, sharing and reusing code to make it more FAIR 
 
 ## What we do not teach 
 
 This course assumes the prior knowledge of and does not focus on teaching:
 
-- Python syntax or skills (even though Python is used in code examples) 
+- Python code syntax or skills (even though Python is used in code examples) 
 - the basic Git workflow
-- how to navigate filesystem, manipulate files and invoke Python scripts and tools from command line terminal/shell.
+- how to navigate file systems, manipulate files and invoke Python scripts and tools from a command line terminal/shell.

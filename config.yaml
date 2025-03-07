@@ -62,7 +62,7 @@ episodes:
 #- writing-content.md
 - 01-introduction.md
 - 02-fair-research-software.md
-- 03-tools.md
+- 03-tools-practices.md
 - 04-version-control.md
 - 05-code-environment.md
 - 06-code-readability.md

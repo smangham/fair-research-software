@@ -6,31 +6,20 @@ exercises: 15
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What are FAIR research principles?
-- How do FAIR principles apply to software (and data)?
+- What are the FAIR research principles?
+- How do FAIR principles apply to software?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 After completing this episode, participants should be able to:
 
-- Explain the FAIR research principles in the context of research software and data
+- Explain the FAIR research principles in the context of research software
 - Explain why these principles are of value in the research community 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-::::::::::::::::::::::::::::::::::::: discussion
-
-### Motivation
-Think about the questions below. Your instructors may ask you to share your answers in a shared notes document and/or
-discuss them with other participants.
-
-- What motivated you to attend this course? Did you come by choice or were you advised to attend?
-- What do you hope to learn or change in your current research software practice? Describe how your knowledge, 
-work or attitude may be different afterwards.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+Let's explore a subset of good software practices based on the FAIR principles.
 
 ## What is FAIR?
 
@@ -83,8 +72,9 @@ closer to the gold standard of fully reproducible research.
 
 FAIR is not a binary metric - there is no such thing as "FAIR or "not FAIR".
 
-FAIR is not a perfect metric, nor does it provide a full and exhaustive software quality checklist.
-Software may be FAIR but still not very good in terms of its functionality.
+FAIR is not a perfect metric, nor does it provide a full and exhaustive software quality checklist - there are other 
+good software quality practices not covered by FAIR. 
+Conversely, software may be FAIR but still not very good in terms of its functionality.
 
 FAIR is **not meant** to criticise or discredit work. 
 
@@ -92,11 +82,9 @@ FAIR refers to the specific **values** of and describes a set of **principles** 
 that can be a helpful guide for researchers who want to improve their practices (by helping them see where they are 
 on the **FAIR spectrum** and help them on a **journey** to make their software more FAIR). 
 
-![*FAIR as a 4D spectrum, image by the Netherlands eScience Center licensed under CC-BY 4.0*](episodes/fig/fair-spectrum.png){alt='FAIR represented as as a 4-dimensional spectrum  with 4 axes - findable, accessible, interoperable and reusable, image by the Netherlands eScience Center licensed under CC-BY 4.0'}
-
 ::::::
 
-We are going to explore the above practices on an example software project we will be working on as part of this
+We are going to explore the FAIR and other good software quality practices on an example software project we will be working on as part of this
 course.
 
 :::  challenge
@@ -114,40 +102,10 @@ Think where on the FAIR spectrum it fits, using the following scale as a guide f
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Tools for assessing FAIRness of software
-
-Here are some tools that can check your software and provide an assessment of its FAIRness:
-
-- [FAIRsoft evaluator][fair-rs-evaluator]
-- [FAIR software test][fair-rs-test]
-- [`How FAIR is your software` - command line tool to evaluate a software repository's compliance with the FAIR principles][howfairis]
-
-### Tools and practices summary
-
-The table below provides a summary of how different tools and practices help with the FAIR software principles.
-
-| Tools and practices                                                                                  | Findable | Accessible | Interoperable | Reusable |
-|------------------------------------------------------------------------------------------------------|----------|------------|---------------| -------- |
-| Virtual development environments                                                                     |          |            |               | x        |
-| Integrated development environments (IDEs)                                                           |          |            |               | x        |
-| Command line terminals - automated and reproducible pipelines                                        |          |            | x             | x        |
-| Standard data exchange formats - e.g. for data exchange (CSV, YAML)                                  |          |            | x             | x        |
-| Communication protocols - Command Line Interface (CLI) or Application Programming Interface (API)    |          |            | x             | x        |
-| Version control tools                                                                                | x        |            |               |          |
-| Code testing & correctness                                                                           |          |            |               | x        |
-| Coding conventions                                                                                   |          |            |               | x        |
-| Code-level documentation (comments and docstrings, explaining functionality)                         |          |            |               | x        |
-| Project-level documentation & metadata (README, explaining functionality/installation/running, etc.) |          |            | x             | x        |
-| License - code sharing & reuse                                                                       |          |            |               | x        |
-| Citation - code reuse & credit                                                                       |          |            |               | x        |
-| Software repositories & registries                                                                   | x        | x          |               |          |
-| Unique persistent identifiers                                                                        | x        | x          |               |          |
-
-Let's have a critical look at this code and think about how FAIR this piece of software is.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
-Look at our code in VS Code and compare this data and code to the software you chose earlier (or assess 
+Look at our software project compare its data and code to the software you chose earlier (or assess 
 it on its own).
 Do you think it is Findable, Accessible, Interoperable and Reusable? 
 Give it a score from 1 to 5 in each category, as in the previous exercise, and then we will discuss it together.
@@ -205,6 +163,14 @@ R - 2/5
 
 Let's now have a look into tools and practices that are commonly used in research that can help us develop software in a 
 more FAIR way.
+
+## Tools for assessing FAIRness of software
+
+Here are some tools that can check your software and provide an assessment of its FAIRness:
+
+- [FAIRsoft evaluator][fair-rs-evaluator]
+- [FAIR software test][fair-rs-test]
+- [`How FAIR is your software` - command line tool to evaluate a software repository's compliance with the FAIR principles][howfairis]
 
 
 ## Further reading

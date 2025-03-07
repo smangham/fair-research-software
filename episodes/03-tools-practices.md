@@ -1,31 +1,35 @@
 ---
-title: "Tools and practices for research software development"
+title: "Tools and good practices for research software"
 teaching: 60
 exercises: 30
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What tools are available to help us develop research software in a FAIR way?
-- How do the tools fit together to enable FAIR research?
+- What tools are available to help us develop good quality and FAIR research software?
+- How do the tools fit together to enable open and reproducible research?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 After completing this episode, participants should be able to:
 
-- Identify some key tools to aid the development of FAIR research software
+- Identify some key tools to aid the development of research software
 - Explain how can these tools help us work in a FAIR way
 - Install and run these key tools on learner's machines
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Tools and good practices
+## Good practices for developing research software
 
-There are various tools and practices that support open and reproducible research, also contributing to each of 
-the four FAIR principles.
-These tools and practices work together, as no single tool or practice will fully address one principle, and conversely
-each one can contribute to multiple principles simultaneously.
+In addition to the FAIR principles covered in the previous episode, there are other good practices for developing 
+research software that promotes open and reproducible research.
+
+## Tools for open and reproducible research software
+
+There are various tools and practices for the development of research software that support open and reproducible 
+research and support the FAIR and other quality software principles.
+These tools and practices work together - no single one will fully address one principle, and each one can contribute to multiple principles simultaneously.
 It is important to note that simply using these tools, without following good practice and guidance on how best to align
 their usage with the FAIR principles, is not enough to produce FAIR software.
 
@@ -98,9 +102,9 @@ A citation file can be a plain text (CITATION.txt) or a Markdown file (CITATION.
 to using use a special file format called the [Citation File Format (CFF)][cff], which provides a way to include richer
 metadata about code (or datasets) we want to cite, making it easy for both humans and machines to use this information.
 
-### Code- and project- level documentation
+### Code documentation
 
-Documentation comes in many forms - from **code-level documentation** including descriptive names of variables and functions and
+Software documentation comes in many forms - from **code-level documentation** including descriptive names of variables and functions and
 additional comments that explain lines of your code, to **project-level documentation** (including README, LICENCE, CITATION, CONTRIBUTING, etc. files)
 that help to discover it, explain the legal terms of reusing it, describe its functionality and how to install, run and contribute to it,
 to whole websites full of documentation with function definitions, usage examples, tutorials and guides.
@@ -127,111 +131,29 @@ Unique persistent identifiers, such as **Digital Object Identifiers** (DOIs) pro
 and similar digital archiving services, and commits/tags/releases used by GitHub and similar code sharing platforms,
 help with findability and accessibility of your software, and can help you get credit for your work by providing citable references.
 
-## Software and data used in this course
 
-We are going to follow a fairly typical experience of a new PhD or postdoc joining a research group. 
-They were emailed some data and analysis code bundled in a `.zip` archive and written by another group member 
-who worked on similar things but has since left the group. 
-They need to be able to install and run this code on their machine, check they can understand it and then adapt it to 
-their own project.
+## Tools and practices summary
 
-As part of the [setup for this course](./index.html#astronaut-data-and-analysis-code), you should have downloaded a `.zip` archive containing the software project
-the new research team member was given. 
-Let's unzip this archive and inspect its content in VS Code. 
-The software project contains:
+The table below provides a summary of how different tools and practices help with the FAIR software principles.
 
-(1) a JSON file (`data.json`) - a snippet of which is shown below - with data on extra-vehicular activities 
-(EVAs or spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided by NASA 
-via its [Open Data Portal](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data))
-![JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose)](episodes/fig/astronaut-data-json-snippet.png){alt='JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose'}
-(2) a Python script (`my code v2.py`) containing some analysis.
-![A first few lines of a Python script](episodes/fig/astronaut-analysis-bad-code-screenshot.png){alt='A first few lines of a Python script used as example code for the episode'}
+| Tools and practices                                                                                  | Findable | Accessible | Interoperable | Reusable |
+|------------------------------------------------------------------------------------------------------|----------|------------|---------------| -------- |
+| Virtual development environments                                                                     |          |            |               | x        |
+| Integrated development environments (IDEs)                                                           |          |            |               | x        |
+| Command line terminals - automated and reproducible pipelines                                        |          |            | x             | x        |
+| Standard data exchange formats - e.g. for data exchange (CSV, YAML)                                  |          |            | x             | x        |
+| Communication protocols - Command Line Interface (CLI) or Application Programming Interface (API)    |          |            | x             | x        |
+| Version control tools                                                                                | x        |            |               |          |
+| Code testing & correctness                                                                           |          |            |               | x        |
+| Coding conventions                                                                                   |          |            |               | x        |
+| Code-level documentation (comments and docstrings, explaining functionality)                         |          |            |               | x        |
+| Project-level documentation & metadata (README, explaining functionality/installation/running, etc.) |          |            | x             | x        |
+| License - code sharing & reuse                                                                       |          |            |               | x        |
+| Citation - code reuse & credit                                                                       |          |            |               | x        |
+| Software repositories & registries                                                                   | x        | x          |               |          |
+| Unique persistent identifiers                                                                        | x        | x          |               |          |
 
-The code in the Python script does some common research tasks:
-
-* Read in the data from the JSON file
-* Change the data from one data format to another and save to a file in the new format (CSV)
-* Perform some calculations to generate summary statistics about the data
-* Make a plot to visualise the data
-
-## Checking your setup
-
-Let's check your setup now to make sure you are ready for the rest of this course.
-
-::::::  challenge
-
-## Checking your setup
-
-Open a command line terminal and look at the prompt. 
-Compare what you see in the terminal with your neighbour, does it look the same or different?
-What information is it telling you and why might this be useful? 
-What other information might you want?
-
-Run the following commands in a terminal to check you have installed the tools listed in the Setup page. 
-Compare the output with your neighbour and see if you can see any differences.
-
-Checking the command line terminal:
-
-1. `$ date`
-2. `$ echo $SHELL`
-3. `$ pwd`
-4. `$ whoami`
-
-Checking Python:
-
-5. `$ python3 --version`
-6. `$ python3 --version`
-7. `$ which python`
-8. `$ which python3`
-
-Checking Git and GitHub:
-
-9. `$ git --help`
-10. `$ git config --list`
-11. `$ ssh -T git@github.com`
-
-Checking VS Code:
-
-12. `$ code`
-13. `$ code --list-extensions`
-
-::: hint
-
-The prompt is the `$` character and any text that comes before it, that is shown on every new line before you type in 
-commands.
-Type each of the commands one at a time and press enter. 
-They should give you a result by printing some text in the terminal.
-
-:::
-
-::: solution
-
-The expected out put of each command is:
-
-1. Today's date
-2. `bash` or `zsh` - this tells you what shell language you are using. In this course we show examples in Bash.
-3. Your "present working directory" or the folder where your shell is running
-4. Your username
-5. In this course we are using Python 3. If `python --version` gives you Python 2.x you may have two versions of Python installed on your computer and need to be careful which one you are using.
-6. Use this command to be certain you are using Python version 3, not 2, if you have both installed.
-7. The file path to where the Python version you are calling is installed.
-8. If you have more than one version these should be different paths, if both 5. and 6. gave the same result then 7. and 8. should match as well.
-9. The help message explaining how to use the `git` command.
-10. You should have `user.name`, `user.email` and `core.editor` set in your Git configuration. Check that the editor listed is one you know how to use.
-11. This checks if you have set up your connection to GitHub correctly. If is says `permission denied` you may need to look at the instructions for setting up SSH keys again on the Setup page.
-12. This should open VSCode in your current working directory. macOS users may need to first open VS Code and [add it to the PATH](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
-13. You should have the extensions GitLens, Git Graph, Python, JSON and Excel Viewer installed to use in this course.
-
-:::
-
-::::::
-
-
-You may have noticed that our researcher has received the software project they are meant to be working as 
-a `.zip` archive via email. 
-In the next episode, we will learn a better practice for sharing and tracking changes to a software project using 
-version control software Git and project sharing and collaboration platform GitHub.
-
+Let's explore some of these practices and tools in detail.
 
 ## Further reading
 
