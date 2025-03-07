@@ -22,8 +22,49 @@ After completing this episode, participants should be able to:
 
 ## Good practices for developing research software
 
-In addition to the FAIR principles covered in the previous episode, there are other good practices for developing 
-research software that promotes open and reproducible research.
+Along with the FAIR principles covered in the previous episode, other good practices exist for developing research 
+software that foster open and reproducible research:
+
+### Software version control 
+
+Use version control systems like Git to track changes, collaborate, and manage the software’s history.
+
+### Reproducible software environments 
+
+Use virtual development environments (e.g. Conda, venv) or containerisation (e.g. Docker) to ensure software can be run and developed consistently across different systems.
+
+### Compliance with coding standards 
+
+Apply relevant coding style guidelines (e.g. PEP8 for Python) to maintain consistency and improve code readability and the reproducibility of results.
+
+### Software project and code structure 
+
+Organise your software project according to community practices and write clean, modular, and reusable code to make it easier to understand, test, extend and reuse.
+
+### Software testing 
+
+Implement tests to verify code functionality and ensure result accuracy as well as consistency over time when making updates to the code.
+
+### Software documentation 
+
+Provide comprehensive documentation, including code comments, setup guides and usage instructions to ensure that others can understand and use the software.
+
+### Software licensing 
+
+Apply open-source licenses (e.g., MIT, BSD) to your code to ensure that it is freely available and can be modified or redistributed.
+
+### Software sharing 
+
+Publish your research software openly, making sure it is well-documented and formatted, and stored in accessible repositories. 
+
+### Collaborative software platforms
+Store your code on platforms like GitHub or GitLab to encourage collaboration, transparency, and code review.
+
+### Code review
+Encourage peer reviews of code to identify bugs, improve quality, and promote knowledge sharing.
+
+### Software citation
+Ensure that software is properly cited in publications and research outputs, and provide citation information in documentation.
 
 ## Tools for open and reproducible research software
 
