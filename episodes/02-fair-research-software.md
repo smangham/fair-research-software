@@ -49,22 +49,17 @@ closer to the gold standard of fully reproducible research.
   may not be enough as they may change their open access model or disappear completely in the future, so archiving your code means it stands a better chance at being preserved
 
 ### Accessible
-- Make sure people can obtain get a copy your software using standard communication protocols (e.g. HTTP, FTP, etc.)
+- Make sure people can obtain get a copy your software using standard communication protocols (e.g. HTTP(S), (S)FTP, etc.)
 - The code and its description (metadata) has to be available even when the software is no longer actively developed (this includes earlier versions of the software)
 
 ### Interoperable
-- Explain the functionality of your software and protocols for interaction with it
-- Use community-agreed standard formats for inputs and outputs of your software and its metadata (e.g. [CodeMeta][codemeta])
+- Use community-agreed standard formats for inputs and outputs of your software and its metadata
 - Communicate with other software and tools via standard protocols and APIs
 
 ### Reusable
-- Document your software (including its functionality, how to install and run it) to make it more understandable by
-  others who may wish to reuse or extend it
-- Follow best practices for software development, e.g. structure your code using common patterns and use coding
-  conventions to make your code readable and understandable by people
-- Test your software and make sure it works on different platforms/operating systems
+- Document your software (including its functionality, how to install and run it) so it is both usable (can be executed) 
+and reusable (can be understood, modified, built upon, or incorporated into other software)
 - Give a licence to your software clearly stating how it can be reused
-- State how to cite your software, so people can give you credit when they reuse it
 
 :::::: callout
 
@@ -164,7 +159,7 @@ R - 2/5
 Let's now have a look into tools and practices that are commonly used in research that can help us develop software in a 
 more FAIR way.
 
-## Tools for assessing FAIRness of software
+## Tools for assessing FAIRness
 
 Here are some tools that can check your software and provide an assessment of its FAIRness:
 

@@ -134,4 +134,5 @@ any links that you are not going to use.
 [fair-rs-evaluator]: https://openebench.bsc.es/observatory/Evaluation
 [fair-rs-test]: https://github.com/marioa/fair-test?tab=readme-ov-file
 [codemeta]: (https://codemeta.github.io/)
-
+[docker]: https://www.docker.com/
+[bitbucket]: https://bitbucket.org/
