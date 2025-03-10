@@ -48,6 +48,13 @@ These guidelines help ensure consistency across a codebase, making it easier for
 Following coding conventions and guides for your programming language that is agreed upon by the community and other programmers
 are important practices to ensure that others find it easy to read your code, reuse or extend it in their own examples and applications.
 
+### Use standard data formats and communication protocols
+
+Using standard data exchange, input and output formats and communication protocols helps create interoperable 
+software that can more readily integrate with other tools into more complex pipelines - increasing its interoperability 
+and reusability.
+
+
 ### Test your software 
 
 Implement tests to validate code functionality, ensure result accuracy, and maintain result consistency over time when updating the code.
@@ -60,7 +67,18 @@ correctly on their machine - helping with code understanding and reusability.
 
 ### Document your software 
 
-Include thorough documentation, such as code comments, API specification, setup guides, and usage instructions, to ensure the software is easy to understand, use and extend.
+Provide clear and comprehensive documentation, including code comments, API specifications, setup guides, and usage 
+instructions, to ensure the software is easy to understand, use, and extend.
+
+Software documentation varies in scope and intended audience (developers and contributors, end-users, 
+system administrators, etc.), ranging from **code-level documentation** for developers and end-users looking to modify and extend 
+the code to **project and product-level** documentation help different users discover the software, understand its 
+functionality, legal terms, installation, contribution guidelines and project governance. 
+More extensive documentation, including full websites with function definitions, usage examples, tutorials, and 
+guides, can further support adoption.
+
+While you may not need as much documentation as a large commercial product, ensuring your code is well-documented is 
+essential for making it discoverable, reusable, and maintainable.
 
 ### License your software  
 
@@ -77,16 +95,10 @@ Openly publish your research software with proper documentation, licence and sto
 Share your code on platforms like GitHub or GitLab to promote collaboration, transparency, and peer. 
 Encourage code reviews of code to identify bugs, improve software correctness and quality, and promote knowledge sharing.
 
-### Enable citing your software
+### Provide citation info for your software
 
 Provide identification and citation information in documentation for your software (including its versions) to ensure that software can be 
 properly cited in publications and research outputs.
-
-There are various ways to do that - including plain text Markdown citation files - but there are certain benefits
-to using use a special file format called the [Citation File Format (CFF)][cff] and accompanying tools to generate it, 
-which provides a way to include richer metadata about code (or data) we want to cite, 
-making it easy for both humans and machines to use this information.
-
 
 ### Use persistent identifiers for your software
 
@@ -97,33 +109,6 @@ Code sharing platforms such as [GitHub][github], [GitLab][gitlab] or [BitBucket]
 commit/tag/release identifiers which are very useful but typically only unique within a project or a repository and not globally. 
 
 Identifiers also help with findability of your software, as well as citing your software (and getting credit for your work by providing citable references).
-
-------
-
-### Standard data formats and communication protocols
-
-Using standard data exchange, input and output formats and communication protocols helps create interoperable software that can more readily integrate
-with other tools into more complex pipelines - increasing its interoperability and reusability.
-
-
-
-
-
-### Code documentation
-
-Software documentation comes in many forms - from **code-level documentation** including descriptive names of variables and functions and
-additional comments that explain lines of your code, to **project-level documentation** (including README, LICENCE, CITATION, CONTRIBUTING, etc. files)
-that help to discover it, explain the legal terms of reusing it, describe its functionality and how to install, run and contribute to it,
-to whole websites full of documentation with function definitions, usage examples, tutorials and guides.
-You many not need as much documentation as a large commercial software product, but making your code reusable relies on other people being able to understand
-what your code does and how to use it.
-
-
-----
-
-These services improve the visibility, credibility, and preservation of research software.
-
---------
 
 ## Tools & services for research software
 
@@ -194,27 +179,46 @@ supporting open access, making research software and data publicly available and
 They provide DOI assignment services for proper citation and tracking and permanent storage ensuring 
 long-term availability and accessibility of research outputs. Zenodo also integrates with code sharing and development platform GitHub
 allowing for automatic archiving of software repositories.
+
+These services improve the visibility, credibility, and preservation of research software.
   
+### Software citation tools
+
+Software citation tools help researchers and developers properly cite software in publications, ensuring credit and 
+reproducibility. 
+These tools generate standardised citation formats and often integrate with repositories like GitHub, Zenodo, and DOI services.
+
+There are multiple formats for providing citation information for software, such as including plain text files 
+(e.g. `CITATION.txt`) or Markdown files (e.g. `CITATION.md`) or BibTeX files within the software and its repository.
+
+[Citation File Format (CFF)][cff] and [CodeMeta][codemeta] are both standard formats for describing software metadata. 
+CFF is a YAML format, while CodeMeta is a JSON format; there are related tools to generate them (e.g. `cffinit`)
+Using `CITATION.cff` or `codemeta.json` files for software citation offers advantages by enabling richer metadata for 
+citing code, making citation information more accessible and usable by both humans and machines and 
+interoperability with various repositories. 
+
 ## Tools & practices summary
 
-The table below provides a summary of how different tools and practices help with the FAIR software principles.
+The table below provides a summary of some good practices that you should be adhering to when developing research software, 
+together with different tools that can help with such practices and how they all contribute to the the FAIR software principles.
 
-| Tools and practices                                                                                  | Findable | Accessible | Interoperable | Reusable |
-|------------------------------------------------------------------------------------------------------|----------|------------|---------------| -------- |
-| Virtual development environments                                                                     |          |            |               | x        |
-| Integrated development environments (IDEs)                                                           |          |            |               | x        |
-| Command line terminals - automated and reproducible pipelines                                        |          |            | x             | x        |
-| Standard data exchange formats - e.g. for data exchange (CSV, YAML)                                  |          |            | x             | x        |
-| Communication protocols - Command Line Interface (CLI) or Application Programming Interface (API)    |          |            | x             | x        |
-| Version control tools                                                                                | x        |            |               |          |
-| Code testing & correctness                                                                           |          |            |               | x        |
-| Coding conventions                                                                                   |          |            |               | x        |
-| Code-level documentation (comments and docstrings, explaining functionality)                         |          |            |               | x        |
-| Project-level documentation & metadata (README, explaining functionality/installation/running, etc.) |          |            | x             | x        |
-| License - code sharing & reuse                                                                       |          |            |               | x        |
-| Citation - code reuse & credit                                                                       |          |            |               | x        |
-| Software repositories & registries                                                                   | x        | x          |               |          |
-| Unique persistent identifiers                                                                        | x        | x          |               |          |
+| Practices                                                    | Tools                                                                                 | Findable | Accessible | Interoperable | Reusable |
+|--------------------------------------------------------------|---------------------------------------------------------------------------------------|----------|------------|---------------| -------- |
+| Use virtual development environments                         | `venv`, `conda`, IDEs (integration with virtual envs.)                                |          |            |               | x        |
+| Write readable code, follow coding conventions               | PEP8, IDEs (help with formating and conforming to coding standars)                    |          |            |               | x        |
+| Automated and reproducible software pipelines                | Command line tools, workflow creation tools (Galaxy, WDL)                             |          |            | x             | x        |
+| Use standard data exchange formats & communication protocols | CSV, YAML, JSON, CLI, API                                                             |          |            | x             | x        |
+|                                                              | (CLI) or                                                                              |          |            | x             | x        |
+| Version control                                              | `git`, GitHub, GitLab, BitBucket                                                      | x        |            |               |          |
+| Software testing                                             | testing framewoks (`pytest`), IDEs (help with testing and debugging)                  |          |            |               | x        |
+| Software identifiers                                         | DOIs, Zenodo, FigShare, SoftwareHeritage                                              |          |            |               | x        |
+| Software documentation                                       | comments and docstrings, different guides, README, contributions guides               |          |            |               | x        |
+| Software metadata                                            | CodeMeta                                                                              |          |            | x             | x        |
+| Software licencing                                           | License - code sharing & reuse                                                        |          |            |               | x        |
+| Sofware citation                                             | DOIs, Zenodo, CFF, `cffinit`, CodeMeta                                                |          |            |               | x        |
+| Sofware sharing, publishing and archiving                    | Software & package repositories & registries, GitHub, GitLab, BitBucket, Zenodo, PyPi | x        | x          |               |          |
+| Code transparency and collaboration                          | Collaborative software sharing platforms, GitHub, GitLab, BitBucket                   | x        | x          |               |          |
+| Code transparency and collaboration                          |                                                                                       | x        | x          |               |          |
 
 Let's explore some of these practices and tools in detail.
 
