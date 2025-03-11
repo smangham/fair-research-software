@@ -25,7 +25,7 @@ Along with the FAIR principles covered in the previous episode, other good pract
 software that foster open and reproducible research. We list some of them here and then cover them in more detail in the 
 rest of the course.
 
-### Use software version control 
+### Use version control 
 
 Using a version control system (like Git) is a fundamental best practice in software development, ensuring that changes to code are tracked,
 managed, and reversible. Version control systems enable efficient collaboration and maintaining a history of modifications.
@@ -53,7 +53,6 @@ are important practices to ensure that others find it easy to read your code, re
 Using standard data exchange, input and output formats and communication protocols helps create interoperable 
 software that can more readily integrate with other tools into more complex pipelines - increasing its interoperability 
 and reusability.
-
 
 ### Test your software 
 
@@ -91,14 +90,10 @@ Use open-source licenses (e.g., MIT, BSD) to make your code freely accessible, m
 
 ### Share your software & encourage review 
 
-Openly publish your research software with proper documentation, licence and storage in accessible repositories.
-Share your code on platforms like GitHub or GitLab to promote collaboration, transparency, and peer. 
-Encourage code reviews of code to identify bugs, improve software correctness and quality, and promote knowledge sharing.
-
-### Provide citation info for your software
-
-Provide identification and citation information in documentation for your software (including its versions) to ensure that software can be 
-properly cited in publications and research outputs.
+Openly publish your research software with proper documentation, licence and storage in accessible repositories for reuse
+and supporting reproducibility of your results.
+Share your code on platforms like GitHub or GitLab to promote collaboration, transparency, and peer review 
+to identify bugs, improve software correctness and quality, and promote knowledge sharing.
 
 ### Use persistent identifiers for your software
 
@@ -109,6 +104,19 @@ Code sharing platforms such as [GitHub][github], [GitLab][gitlab] or [BitBucket]
 commit/tag/release identifiers which are very useful but typically only unique within a project or a repository and not globally. 
 
 Identifiers also help with findability of your software, as well as citing your software (and getting credit for your work by providing citable references).
+
+### Provide citation info for your software
+
+Provide identification and citation information in documentation for your software (including its versions) to ensure that software can be
+properly cited in publications and research outputs.
+
+### Build community & encourage collaboration around your software
+
+Foster a community and promote collaboration around your software by engaging with users, encouraging contributions, 
+and providing clear guidelines for participation. 
+Use platforms like GitHub or GitLab to facilitate discussions, issue tracking, and pull requests. 
+Maintain clear documentation, respond to feedback, and recognise contributors to create an inclusive and supportive 
+environment that encourages long-term involvement, maintenance and sustainability of your software.
 
 ## Tools & services for research software
 
@@ -141,16 +149,15 @@ systems. We will not cover Docker in this course, and will focus on environments
 this is sometimes needed for running our code remotely on servers and high-performance systems without a GUI provision, where time,
 memory and processing power are expensive or in high demand.
 
-Version control systems are typically provided as **command line tools**, making them accessible from command line terminals 
-to enter commands and access remote version control servers to backing up and sharing our work. 
-Many IDEs now provide integrations with version control systems too - and making them accessible using a GUI instead of 
-typing commands in a terminal.
+**Version Control Systems** (VCS) are typically provided as **command line tools** and used from command line terminals 
+to enter commands, interact with VCSs and access remote version control servers to back up and share our work. 
+Many IDEs now provide integrations with VCSs too - making them accessible using a GUI instead of typing commands in a terminal.
 
-Command line tools are interoperable software that use standard protocols for passing parameters, inputs and outputs via the command line terminal.
-This makes it easier to integrate with other command line tools, allowing us to chain them and build up complex and reproducible workflows and analysis pipelines
+Well designed command line tools support interoperability by using standard protocols for passing parameters, inputs and outputs.
+Such tools integrate well with one another - allowing us to chain them and build up complex and reproducible workflows and analysis pipelines
 using several tools in different steps.
-If we write our software in a way which provides such an interoperable command line interface - we will be able to integrate it with other command line tools to
-automate and speed up our work.
+If we write our software in a way which provides such an interoperable Command Line Interface (CLI) - we will be able to integrate it with 
+other existing command line tools to automate and speed up our work.
 
 ### Version control tools
 
@@ -161,7 +168,7 @@ collaboration on shared code by allowing edits by more than one person at a time
 
 ### Software repositories and registries
 
-Having somewhere to share your code is fundamental to making it findable and accessible.
+Having somewhere to share or publish your code is fundamental to making it findable and accessible.
 Your institution might have a code repository, your research field may have a practice of sharing code via a specific website, archive or journal,
 or your version control system might include an online component that makes sharing different versions of your code easy.
 You should check the rules or guidelines of your institution, grant or domain on publishing code, as well as any licenses of the code your software depends on or reuses.
@@ -172,12 +179,15 @@ Some examples of commonly used software repositories and registries include:
 - programming language-specific software repositories for publishing software packages and libraries- [PyPi][pypi] (for Python) and [CRAN][cran] (for R)
 - software registries - [BioTools][biotools] (for biosciences) and [Awesome Research Software Registries][awesome-rs-registries], providing a list of research software registries (by country, organisation, domain and programming language) where research software can be registered to help promote its discovery
 
+Platforms like GitHub, GitLab and BitBucket are more than just source code repositories - they provide social platforms 
+to facilitate discussions, issue tracking, and collaboration around your software projects and promote long-term involvement, maintenance and sustainability of your software.
+
 ### Software identifying and archiving services
 
 Services like [Zenodo][zenodo] help with publishing, archiving, and identifying research software and data (and their multiple versions) - 
 supporting open access, making research software and data publicly available and promoting reproducibility. 
-They provide DOI assignment services for proper citation and tracking and permanent storage ensuring 
-long-term availability and accessibility of research outputs. Zenodo also integrates with code sharing and development platform GitHub
+They provide DOI assignment services for proper citation and tracking (by providing globally unique identifiers and resolvable references) 
+and permanent archiving (storage) ensuring long-term availability and accessibility of research outputs (even if code sharing services go offline for any reason). Zenodo also integrates with code sharing and development platform GitHub
 allowing for automatic archiving of software repositories.
 
 These services improve the visibility, credibility, and preservation of research software.
@@ -200,27 +210,25 @@ interoperability with various repositories.
 ## Tools & practices summary
 
 The table below provides a summary of some good practices that you should be adhering to when developing research software, 
-together with different tools that can help with such practices and how they all contribute to the the FAIR software principles.
+together with different tools that can help with such practices and how they contribute to the the FAIR and other good software principles.
 
-| Practices                                                    | Tools                                                                                 | Findable | Accessible | Interoperable | Reusable |
-|--------------------------------------------------------------|---------------------------------------------------------------------------------------|----------|------------|---------------| -------- |
-| Use virtual development environments                         | `venv`, `conda`, IDEs (integration with virtual envs.)                                |          |            |               | x        |
-| Write readable code, follow coding conventions               | PEP8, IDEs (help with formating and conforming to coding standars)                    |          |            |               | x        |
-| Automated and reproducible software pipelines                | Command line tools, workflow creation tools (Galaxy, WDL)                             |          |            | x             | x        |
-| Use standard data exchange formats & communication protocols | CSV, YAML, JSON, CLI, API                                                             |          |            | x             | x        |
-|                                                              | (CLI) or                                                                              |          |            | x             | x        |
-| Version control                                              | `git`, GitHub, GitLab, BitBucket                                                      | x        |            |               |          |
-| Software testing                                             | testing framewoks (`pytest`), IDEs (help with testing and debugging)                  |          |            |               | x        |
-| Software identifiers                                         | DOIs, Zenodo, FigShare, SoftwareHeritage                                              |          |            |               | x        |
-| Software documentation                                       | comments and docstrings, different guides, README, contributions guides               |          |            |               | x        |
-| Software metadata                                            | CodeMeta                                                                              |          |            | x             | x        |
-| Software licencing                                           | License - code sharing & reuse                                                        |          |            |               | x        |
-| Sofware citation                                             | DOIs, Zenodo, CFF, `cffinit`, CodeMeta                                                |          |            |               | x        |
-| Sofware sharing, publishing and archiving                    | Software & package repositories & registries, GitHub, GitLab, BitBucket, Zenodo, PyPi | x        | x          |               |          |
-| Code transparency and collaboration                          | Collaborative software sharing platforms, GitHub, GitLab, BitBucket                   | x        | x          |               |          |
-| Code transparency and collaboration                          |                                                                                       | x        | x          |               |          |
+| Practices                                                                        | Tools                                                                                                                                     | FAIR | Readable/Understandable | Correct/Reliable  | Sustainable/Maintainable |
+|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|------|-------------------------|-------------------|--------------------------|
+| Use version control                                                              | `git`, GitHub, GitLab, BitBucket                                                                                                          | F    |                         |                   |                          |
+| Good software project & modular code structure                                   | Use conventional folder structures, write modular code with well defined interfaces                                                       | R    | x                       |                   | x                        |
+| Connect reusable software modules into automated/reproducible software pipelines | Command line tools, CLI, workflow tools (Galaxy, Snakemake, WorkflowHub, CWL)                                                             | I, R |                         |                   |                          |
+| Use reproducible software development environments                               | `venv`, `conda`, IDEs (integration with virtual envs.), Docker, etc.                                                                      | R    |                         |                   |                          |
+| Format your code to comply with coding conventions                               | PEP8, IDEs (help with formatting and conforming with coding conventions)                                                                  | R    |                         |                   |                          |
+| Use standard exchange data formats/communication protocols/interfaces            | CSV, YAML, JSON, CLI, REST, HTTP(S), etc.                                                                                                 | I    |                         |                   | x                        |
+| Test your software                                                               | Write unit, functional, integration, regression, etc. tests, IDEs (testing and debugging), CI/CD to run tests automatically in pipelines  |      |                         | x                 |                          |
+| Document your software                                                           | Comments and documentation strings, README, guides, contributions guidelines                                                              | R    | x                       |                   |                          |
+| Share your software & encourage review                                           | Code sharing platforms/services (e.g. GitHub, GitLab, BitBucket) and their code review facilities                                         | F, A |                         |                   | x                        |
+| License your software                                                            | Various open source licences for code (MIT, BSD, GPL, LGPL, etc.)                                                                         | R    |                         |                   |                          |
+| Use persistent identifiers for your software                                     | DOIs, SWHIDs, Zenodo, FigShare, Software Heritage, etc.                                                                                   | F    |                         |                   | x                        |
+| Provide citation & metadata info for your software                               | DOIs, Zenodo, CFF, `cffinit`, CodeMeta, etc.                                                                                              | R    |                         |                   | x                        |
+| Build community & encourage collaboration around your software                   | Code of Conduct, contribution guidelines, open source project governance processes                                                        |      |                         |                   | x                        |
 
-Let's explore some of these practices and tools in detail.
+Let's explore some of these practices and tools in detail over the next few episodes.
 
 ## Further reading
 
@@ -230,6 +238,7 @@ We recommend the following resources for some additional reading on the topic of
 - [Python IDEs and Code Editors (Guide) - Real Python][real-python-ides]
 - [The Zenodo data repository][zenodo-org]
 - [The Fair Cookbook - Depositing to generic repositories - Zenodo use case][fair-cookbook-zenodo]
+- [The Turing Way "Handbook to reproducible, ethical and collaborative research"][ttw-handbook]
 
 Also check the [full reference set](learners/reference.md#litref) for the course.
 

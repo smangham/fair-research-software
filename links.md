@@ -21,8 +21,8 @@ any links that you are not going to use.
 [fair-principles-research-software]: https://www.nature.com/articles/s41597-022-01710-x
 [fair-data-principles]: https://www.nature.com/articles/sdata201618
 [5-fair-software-recommendations]: https://fair-software.eu/
-[ttw-handbook]: https://the-turing-way.netlify.app/index.html
-[ttw-guide-reproducible-research]: https://the-turing-way.netlify.app/reproducible-research/reproducible-research
+[ttw-handbook]: https://book.the-turing-way.org/
+[ttw-guide-reproducible-research]: https://book.the-turing-way.org/reproducible-research/reproducible-research
 [ttw-reproducibility-def]: https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions
 [wiki-reproducibility-def]: https://en.wikipedia.org/wiki/Reproducibility
 [wiki-open-research-def]: https://en.wikipedia.org/wiki/Open_research
