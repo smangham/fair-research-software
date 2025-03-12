@@ -1,5 +1,5 @@
 ---
-title: Open code & collaboration
+title: Open software & collaboration
 teaching: 60
 exercises: 30
 ---

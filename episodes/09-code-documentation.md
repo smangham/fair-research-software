@@ -1,5 +1,5 @@
 ---
-title: Code documentation
+title: Software documentation
 teaching: 60
 exercises: 30
 ---

@@ -67,7 +67,7 @@ episodes:
 - 05-code-environment.md
 - 06-code-readability.md
 - 07-code-structure.md
-- 08-code-correctness.md
+- 08-code-correctness-testing.md
 - 09-code-documentation.md
 - 10-open-collaboration.md
 - 11-wrap-up.md
