@@ -6,8 +6,8 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is open, reproducible and FAIR research?
-- Why are these practices important?
+- What is open and reproducible research?
+- Why are these practices important, in particular in the context of software used to support such research?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -17,6 +17,7 @@ After completing this episode, participants should be able to:
 
 - Understand the concept of open and reproducible research
 - Understand why these principles are of value in the research community 
+- Setup their machine with software and data used to teach this course
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
