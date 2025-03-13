@@ -9,8 +9,8 @@ The course can be delivered over 2 full or 4 half days.
 
 ## Target Audience
 
-- Post-graduate students or early career researchers who are starting their research projects, have foundational 
-knowledge of Python, version control and using software tools from command line shell, and want to develop 
+- Post-graduate students, early career researchers or junior Research Software Engineers (RSEs) who are starting their research or software projects, 
+have foundational knowledge of Python, version control and using software tools from command line shell, and want to develop 
 software to support their research using established best practices
 - Researchers or scientists who had foundational software training before but wish to refresh, 
 reinforce or improve their skills and practices in the wider context of FAIR research and sharing and writing 
