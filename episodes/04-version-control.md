@@ -60,7 +60,7 @@ Later on in the course, we'll also see how version control makes it easier for m
 **Git** is the most popular version control system, and the one we'll be using.
 It's used mostly for managing code when developing software, but it can track *any* files - and it's particularly effective with text-based files (e.g. source code like `.py`, `.c`, `.r`, but also `.csv`, `.tex` and more).
 
-Git stores files in **repositories**; directories where changes to the files can be tracked.
+Git stores files in **repositories** - directories where changes to the files can be tracked.
 The diagram below shows the different parts of a repository,
 and the most common commands used to work with one.
 We'll cover these commands in more detail -- this is just a high-level overview.
