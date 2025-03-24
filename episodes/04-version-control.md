@@ -453,18 +453,14 @@ Read the two commit messages below.
 Write down your thoughts, and respond to those of others - which is the most helpful? Why?
 Do you have any examples of when commit messages would've helped you (or have helped you)?
 
-1. ```output
-   [main 7cf85f6] Change variable
+1. [main 7cf85f6] Change variable
      1 file changed, 1 insertion(+), 1 deletion(-)
-   ```
-2. ```output
-   [main 8baf69d] Change variable name from columns to column_headers
+
+2. [main 8baf69d] Change variable name from columns to column_headers
     1 file changed, 1 insertion(+), 1 deletion(-)
-   ```
 
 #### Responses
 * (Your response here)
-
 ```
 
 :::
@@ -504,11 +500,10 @@ but a few extra seconds of writing can save you hours of bug-hunting!
 
 ### Self-contained commits
 
-If we want our commit messages to be descriptive and help us understand the changes in the project over time,
-then we also have to make commits that are very self-contained.
-That is to say that each commit we make should only change one, logical thing.
-"Logical" here means one aspect of updating the files has been completed
- - for example, adding documentation, or renaming a function.
+If we want our commit messages to be descriptive and helpful,
+then we have to make very self-contained commits.
+Each one should only change one logical thing, to completion -
+ for example, adding documentation, or renaming a function.
 We don't mean that changes are committed line-by-line!
 This is partly why Git has the staging area,
 rather than automatically saving changes file-by-file like Dropbox or OneDrive.
@@ -516,8 +511,8 @@ If a change requires modifying multiple files to make sense, like when we rename
 then you can commit *all* the edits required for it in one go,
 so you don't have logical inconsistencies in your code.
 
-Equally, don't think you should avoid committing code until it's *totally* finished.
-Most changes can be broken down into smaller sub-steps.
+Equally, don't avoid committing code until it's *totally* finished.
+Most changes can be broken down into smaller steps. which can be completed.
 It's better to have part-finished code in a repository,
 with clear commit messages saying what still needs doing,
 than code that never gets committed and can be lost in a hard drive crash!
@@ -526,11 +521,10 @@ See the ["Things to avoid when creating commits" section][git-commit-avoid]
 of [Openstack's "Git Commit Good Practice" documentation][git-commit-good-practice] for examples of logical,
 self-contained commits, and commits that don't follow this practice.
 
-The reasons self-contained commits are important are
-* It helps with reviewing changes if each commit tackles one step
-* If code breaks, tracking down the specific change that caused the break is simpler
-* If you need to undo changes, you can remove them in small increments,
-  rather than losing a lot of unrelated work along with the change you do want to remove.
+Self-contained commits are important as:
+* Reviewing changes is easier when each commit tackles one step
+* Tracking down changes that broke functionality is simpler
+* Unwanted changes can be undone in small increments, without losing a lot of unrelated work.
 
 
 ::: instructor
