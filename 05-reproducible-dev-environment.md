@@ -1,5 +1,5 @@
 ---
-title: Reproducible development environment
+title: Reproducible software environments
 teaching: 30
 exercises: 0
 ---
@@ -66,8 +66,9 @@ The solution for this problem is to create a self-contained
 which contains a particular version of Python installation
 plus a number of additional external libraries.
 
-## Virtual development environments
-So what exactly are virtual environments, and why use them?
+## What are virtual software environments?
+
+So what exactly are virtual software environments, and why use them?
 
 A Python virtual environment helps us create an **isolated working copy** of a software project
 that uses a specific version of Python interpreter
@@ -84,6 +85,9 @@ Then you do not have to worry about changes to the environment of the current pr
 affecting other projects - you can use different Python versions and different versions of the same third party
 dependency by different projects on your machine independently from one another.
 
+We can visualise the use of virtual environments for different Python projects on the same machine as follows:
+![Diagram to depict different Python environments containing different packages on the same machine](episodes/fig/ep05_virtual-env.png){alt='Diagram to depict different Python environments containing different packages on the same machine'}
+
 Another big motivator for using virtual environments is that they make sharing your code with others much easier - 
 as we will see shortly you can record your virtual environment in a special file and share it with your collaborators
 who can then recreate the same development environment on their machines.
@@ -94,7 +98,7 @@ Virtual environments also enable you to always use
 the latest available version without specifying it explicitly.
 They also enable you to use a specific older version of a package for your project, should you need to.
 
-### Managing virtual environments
+## Managing virtual environments
 
 There are several command line tools used for managing Python virtual environments - we will use `venv`, 
 available by default from the standard `Python` distribution since `Python 3.3`.
@@ -107,7 +111,7 @@ it interacts and obtains the packages from the central repository called
 
 So, we will use `venv` and `pip` in combination to help us create and share our virtual development environments.
 
-### Creating virtual environments
+## Creating virtual environments
 
 Creating a virtual environment with `venv` is done by executing the following command:
 
@@ -145,7 +149,7 @@ drwxr-xr-x   2 alex  staff   64  5 Oct 11:47 include
 drwxr-xr-x   3 alex  staff   96  5 Oct 11:47 lib
 -rw-r--r--   1 alex  staff   90  5 Oct 11:47 pyvenv.cfg
 ```
-So, running the `python -m venv venv_spacewalks` command created the target directory called "venv_spacewalks"
+So, running the `python3 -m venv venv_spacewalks` command created the target directory called "venv_spacewalks"
 containing:
 
 - `pyvenv.cfg` configuration file
@@ -242,7 +246,7 @@ e.g. `python3 -m pip install matplotlib==3.5.3`.
 To specify a minimum version of a Python package,
 you can do `python3 -m pip install matplotlib>=3.5.1`.
 
-To upgrade a package to the latest version, e.g. `python -m pip install --upgrade matplotlib`.
+To upgrade a package to the latest version, e.g. `python3 -m pip install --upgrade matplotlib`.
 
 To display information about a particular installed package do:
 
@@ -290,10 +294,10 @@ six             1.16.0
 zope.interface  7.0.1
 ```
 
-To uninstall a package installed in the virtual environment do: `python -m pip uninstall <package-name>`.
+To uninstall a package installed in the virtual environment do: `python3 -m pip uninstall <package-name>`.
 You can also supply a list of packages to uninstall at the same time.
 
-### Sharing virtual environments
+## Sharing virtual environments
 
 You are collaborating on a project with a team so, naturally,
 you will want to share your environment with your collaborators
@@ -302,7 +306,7 @@ and everyone can replicate equivalent virtual environments on their machines.
 `pip` has a handy way of exporting, saving and sharing virtual environments.
 
 To export your active environment -
-use `python -m pip freeze` command to produce a list of packages installed in the virtual environment.
+use `python3 -m pip freeze` command to produce a list of packages installed in the virtual environment.
 A common convention is to put this list in a `requirements.txt` file in your project's root directory:
 
 ```bash
@@ -370,7 +374,7 @@ from your virtual environment) is update the contents of the `requirements.txt` 
 by re-issuing `pip freeze` command and propagate the updated `requirements.txt` file to your collaborators
 via your code sharing platform.
 
-## Running the code
+## Running the code and reproducing results
 
 We are now setup to run our code from the newly created virtual environment:
 

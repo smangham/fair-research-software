@@ -102,7 +102,14 @@ work on GitHub allowing other people to see and contribute to our work.
 
 ### Create a new repository
 
-Create a new directory in the `Desktop` folder for our work, and then change the current working directory 
+Before we start using Git, if you have not done this step during setup, make sure to tell Git now to use `main` 
+as the default branch (instead of `master`) which is what we use in this course:
+
+```bash
+$ git config --global init.defaultBranch main
+```
+
+Let us create a new empty directory in the `Desktop` folder for our work, and then change the current working directory 
 to the newly created one:
 
 ```bash
@@ -111,10 +118,10 @@ $ mkdir spacewalks
 $ cd spacewalks
 ```
 
-We tell Git to make `spacewalks` a repository -- a place where Git can store versions of our files:
+We will now tell Git to make `spacewalks` a repository -- a place where Git can store versions of our files:
 
 ```bash
-git init
+$ git init
 ```
 
 We can check everything is setup correctly by asking Git to tell us the status of our project:
@@ -462,7 +469,7 @@ work along with the change you do want to remove.
 ### Understanding commit contents
 
 Below are the `diffs` of two commits. A `diff` shows the differences in a file (or files!) compared to the previous 
-commit in the history so you can what has changed. 
+commit in the history so you can see what has changed. 
 The lines that begin with `+`s represent additions, and the lines that begin with `-`s represent deletions. 
 Compare these two commit `diff`s. 
 Can you understand what the commit author was trying to achieve in each commit? 
@@ -531,7 +538,7 @@ methods:
   deciding to discard some work.
 - [`git reset`](https://git-scm.com/docs/git-reset): This command will recover
   the state of the project at the specified commit. What is done with the commits
-  you had mave since is defined by some optional flags:
+  you had made since is defined by some optional flags:
   - `--soft`: Any changes you have made since the specified commit would be preserved and left as "Changes to be committed"
   - `--mixed`: Any changes you have made since the specified commit would be preserved but not marked for commit (this is the default action)
   - `--hard`: Any changes you have made since the specified commit are discarded.

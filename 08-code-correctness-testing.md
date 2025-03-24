@@ -1,5 +1,5 @@
 ---
-title: "Code correctness"
+title: "Code correctness & testing"
 teaching: 60
 exercises: 30
 ---
@@ -78,7 +78,7 @@ conduct **better research** and produce **FAIR software**:
 
 ## Types of software tests
 
-There are many different types of software testing.
+There are many different types of software tests, including:
 
 -   **Unit tests** focus on testing individual functions in
     isolation. They ensure that each small part of the software performs
@@ -700,7 +700,7 @@ def calculate_crew_size(crew):
         crew (str): The text entry in the crew column containing a list of crew member names
 
     Returns:
-        int: The crew size
+        (int): The crew size
     """
     if crew.split() == []:
         return None
@@ -921,7 +921,7 @@ To get an in-depth report about which parts of our code are tested and
 which are not, we can add the option `--cov-report=html`.
 
 ``` bash
-(venv_spacewalks) $ python -m pytest --cov --cov-report=html 
+(venv_spacewalks) $ python3 -m pytest --cov --cov-report=html 
 ```
 
 This option generates a folder `htmlcov` in the project root directory containing a code coverage report in HTML format. 
@@ -950,15 +950,17 @@ Test coverage of 100% does not mean that our code is bug-free.
 
 ### Evaluating code coverage
 
-Generate the code coverage report for your software using the `python3 -m pytest --cov --cov-report=html` command, 
-inspect it and and extract the following information:
+Generate the code coverage report for your software using the `python3 -m pytest --cov --cov-report=html` command.
+
+Inspect the `htmlcov` folder created by the above command in the root directory of your propject, then open the 
+`htmlcov/index.html` file in a Web browser and extract the following information:
 
 a.  What proportion of the code base is currently "not" exercised by the test suite?
 b.  Which functions in our code base are currently untested?
 
 ::: solution
 
-a.  You can find this information on the "Files" tab of the HTML report. 
+a.  You can find this information on the "Files" tab of the HTML report saved in the `htmlcov/index.html` file. 
 The proportion of the code base NOT covered by our tests is 68% (100% - 32%) - this may differ for your 
 version of the code.
 b.  You can find this information on the "Functions" tab of the HTML report. 

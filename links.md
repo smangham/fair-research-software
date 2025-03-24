@@ -21,8 +21,8 @@ any links that you are not going to use.
 [fair-principles-research-software]: https://www.nature.com/articles/s41597-022-01710-x
 [fair-data-principles]: https://www.nature.com/articles/sdata201618
 [5-fair-software-recommendations]: https://fair-software.eu/
-[ttw-handbook]: https://the-turing-way.netlify.app/index.html
-[ttw-guide-reproducible-research]: https://the-turing-way.netlify.app/reproducible-research/reproducible-research
+[ttw-handbook]: https://book.the-turing-way.org/
+[ttw-guide-reproducible-research]: https://book.the-turing-way.org/reproducible-research/reproducible-research
 [ttw-reproducibility-def]: https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions
 [wiki-reproducibility-def]: https://en.wikipedia.org/wiki/Reproducibility
 [wiki-open-research-def]: https://en.wikipedia.org/wiki/Open_research
@@ -125,7 +125,7 @@ any links that you are not going to use.
 [mkdocs-deploy]: https://www.mkdocs.org/user-guide/deploying-your-docs/
 [opensource-licence-guide]: https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project
 [choosealicense]: https://choosealicense.com/
-[10-rules-better software]: https://doi.org/10.1371/journal.pcbi.1012410
+[10-rules-better-software]: https://doi.org/10.1371/journal.pcbi.1012410
 [rsmd-g1]: https://fair-impact.github.io/RSMD-guidelines/1.General/
 [software-heritage]: https://www.softwareheritage.org/
 [swhid]: https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html
@@ -133,5 +133,6 @@ any links that you are not going to use.
 [howfairis]: https://github.com/fair-software/howfairis/
 [fair-rs-evaluator]: https://openebench.bsc.es/observatory/Evaluation
 [fair-rs-test]: https://github.com/marioa/fair-test?tab=readme-ov-file
-[codemeta]: (https://codemeta.github.io/)
-
+[codemeta]: https://codemeta.github.io/
+[docker]: https://www.docker.com/
+[bitbucket]: https://bitbucket.org/

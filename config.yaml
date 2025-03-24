@@ -11,13 +11,13 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'Tools and practices for FAIR research software' # FIXME
+title: 'Software tools and practices for open and reproducible research' 
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2023-10-03 # FIXME
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, FAIR, reproducibility, sustainability, open, research, lesson, The Carpentries' # FIXME
+keywords: 'research software, good practices, FAIR, reproducibility, sustainability, open, research, lesson, The Carpentries' 
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -62,13 +62,13 @@ episodes:
 #- writing-content.md
 - 01-introduction.md
 - 02-fair-research-software.md
-- 03-tools.md
+- 03-tools-practices.md
 - 04-version-control.md
-- 05-code-environment.md
+- 05-reproducible-dev-environment.md
 - 06-code-readability.md
 - 07-code-structure.md
-- 08-code-correctness.md
-- 09-code-documentation.md
+- 08-code-correctness-testing.md
+- 09-software-documentation.md
 - 10-open-collaboration.md
 - 11-wrap-up.md
 
@@ -78,6 +78,7 @@ learners:
 - ci-for-testing.md
 - licensing.md
 - ethical-environmental-considerations.md
+- installation-instructions.md
 
 # Information for Instructors
 instructors: 
