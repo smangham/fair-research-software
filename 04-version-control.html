@@ -766,7 +766,7 @@ time.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To save the changes to the renamed Python file, use the following Git
 commands:</p>
@@ -900,36 +900,75 @@ specific commit message convention, this will usually be described in
 their <a href="https://en.wikipedia.org/wiki/Contributing_guidelines" class="external-link">contributing
 guidelines</a>.</p>
 
+<div id="good-commit-messages" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="good-commit-messages" class="callout-inner">
+<h3 class="callout-title">Good commit messages</h3>
+<div class="callout-content">
+<p>Read the two commit messages below. In pairs or small groups, discuss
+which messages help you understand more about what the commit author
+did. What about the commit messages do you find helpful or not?</p>
+<ol style="list-style-type: decimal"><li><div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   [main 7cf85f6] Change variable
+     1 file changed, 1 insertion(+), 1 deletion(-)</code></pre>
+</div></li>
+<li><div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   [main 8baf69d] Change variable name from columns to column_headers
+    1 file changed, 1 insertion(+), 1 deletion(-)</code></pre>
+</div></li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Commit message (2) is pretty clearly better, as it actually tells you
+what the author did. If a section of your code that depended on this
+code broke after this change, you could easily tell why, and how to fix
+it. The message could be improved further by adding a blank line then
+some detail on <em>why</em> this change was made. Not every change needs
+more than 50 characters, but a few extra seconds of writing can save you
+hours of bug-hunting!</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="self-contained-commits">Self-contained commits<a class="anchor" aria-label="anchor" href="#self-contained-commits"></a></h3>
-<p>If we want our commit messages to be descriptive and help us
-understand the changes in the project over time, then we also have to
-make commits that are very self-contained. That is to say that each
-commit we make should only change one, logical thing. “Logical” here
-means one aspect of updating the files has been completed - for example,
-adding documentation, or renaming a function. We don’t mean that changes
-are committed line-by-line! This is partly why Git has the staging area,
-rather than automatically saving changes file-by-file like Dropbox or
-OneDrive. If a change requires modifying multiple files to make sense,
-like when we renamed the input data file, then you can commit
-<em>all</em> the edits required for it in one go, so you don’t have
-logical inconsistencies in your code.</p>
-<p>Equally, don’t think you should avoid committing code until it’s
-<em>totally</em> finished. Most changes can be broken down into smaller
-sub-steps. It’s better to have part-finished code in a repository, with
-clear commit messages saying what still needs doing, than code that
+<p>If we want our commit messages to be descriptive and helpful, then we
+have to make very self-contained commits. Each one should only change
+one logical thing, to completion - for example, adding documentation, or
+renaming a function. We don’t mean that changes are committed
+line-by-line! This is partly why Git has the staging area, rather than
+automatically saving changes file-by-file like Dropbox or OneDrive. If a
+change requires modifying multiple files to make sense, like when we
+renamed the input data file, then you can commit <em>all</em> the edits
+required for it in one go, so you don’t have logical inconsistencies in
+your code.</p>
+<p>Equally, don’t avoid committing code until it’s <em>totally</em>
+finished. Most changes can be broken down into smaller steps. which can
+be completed. It’s better to have part-finished code in a repository,
+with clear commit messages saying what still needs doing, than code that
 never gets committed and can be lost in a hard drive crash!</p>
 <p>See the <a href="https://wiki.openstack.org/wiki/GitCommitMessages#Things_to_avoid_when_creating_commits" class="external-link">“Things
 to avoid when creating commits” section</a> of <a href="https://wiki.openstack.org/wiki/GitCommitMessages" class="external-link">Openstack’s
 “Git Commit Good Practice” documentation</a> for examples of logical,
 self-contained commits, and commits that don’t follow this practice.</p>
-<p>The reasons self-contained commits are important are * It helps with
-reviewing changes if each commit tackles one step * If code breaks,
-tracking down the specific change that caused the break is simpler * If
-you need to undo changes, you can remove them in small increments,
-rather than losing a lot of unrelated work along with the change you do
-want to remove.</p>
+<p>Self-contained commits are important as: * Reviewing changes is
+easier when each commit tackles one step * Tracking down changes that
+broke functionality is simpler * Unwanted changes can be undone in small
+increments, without losing a lot of unrelated work.</p>
 
 <div id="understanding-commit-contents" class="callout challenge">
 <div class="callout-square">
@@ -961,7 +1000,7 @@ Version control with Git lesson</a>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The git <code>diff</code> presented in option (1) is cleaner. The
 author has only tackled one thing: placing the import statements at the
@@ -977,10 +1016,10 @@ is required.</p>
 <h3 id="git-logs">Git logs<a class="anchor" aria-label="anchor" href="#git-logs"></a></h3>
 <p>If we want to know what we’ve done recently, we can ask Git to show
 us the project’s history using <code>git log</code>:</p>
-<div class="codewrapper sourceCode" id="cb38">
+<div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">$</span> git log</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="ex">$</span> git log</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1089,12 +1128,12 @@ to do that for different scenarios. Change the toggle on the right side
 from “HTTPS” to “SSH”, then look at the heading “…or push an existing
 repository from the command line”. You should see instructions will look
 like this:</p>
-<div class="codewrapper sourceCode" id="cb40">
+<div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span>
-<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
-<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span>
+<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
 </li>
 </ol><p><strong>It’s very important you make sure you’ve switched from
@@ -1110,10 +1149,10 @@ remote repositories</em></div>
 <code>my-code-v2.py</code> and <code>eva-data.json</code> visible in the
 GitHub repository, matching what you have locally on your machine.</li>
 </ol><p>Let’s explain a bit more about what those commands did…</p>
-<div class="codewrapper sourceCode" id="cb41">
+<div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span></code></pre>
 </div>
 <p>This command tells Git to create a <code>remote</code> called
 “origin” and link it to the URL of your GitHub repository. A
@@ -1125,19 +1164,19 @@ convention that is often used by default in Git and GitHub since it
 indicates which repository is considered the “source of truth”,
 particularly useful when many people are collaborating on the same
 repository.</p>
-<div class="codewrapper sourceCode" id="cb42">
+<div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span></code></pre>
 </div>
 <p><code>git branch</code> is a command used to manage branches. We’ll
 discuss branches later on in the course. This command ensures the branch
 we are working on is called “main”. This will be the default branch of
 the project for everyone working on it.</p>
-<div class="codewrapper sourceCode" id="cb43">
+<div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
 <p>The <code>git push</code> command is used to update remote
 repositories with any changes you’ve made locally. This command tells
@@ -1165,7 +1204,7 @@ each term?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <ul><li>
 <code>remote</code>: a version control concept where two (or more)
