@@ -67,7 +67,7 @@ and easily combine their contributions.
 Git is used mostly for managing code when developing software, but it can track *any* files --
 and is particularly effective with text-based files (e.g. source code like `.py`, `.c`, `.r`, but also `.csv`, `.tex` and more).
 
-Git stores files in **repositories**; directories where changes to the files can be tracked.
+Git stores files in **repositories** - directories where changes to the files can be tracked.
 The diagram below shows the different parts of a repository,
 and the most common commands used to work with one.
 We'll cover these commands in more detail -- this is just a high-level overview.
