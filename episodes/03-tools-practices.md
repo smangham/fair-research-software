@@ -63,7 +63,7 @@ Using standard data exchange, input and output formats and communication protoco
 software that can more readily integrate with other tools into more complex pipelines - increasing its interoperability 
 and reusability.
 
-## Test your software 
+## Test software 
 
 Implement tests to validate code functionality, ensure result accuracy, and maintain result consistency over time when updating the code.
 Testing ensures that your code is correct and does what it is set out to do.
@@ -73,7 +73,7 @@ it is very hard to consider all possible edge cases or notice every single typin
 Testing also gives other people confidence in your code as they can see an example of how it is meant to run and be assured that it does work
 correctly on their machine - helping with code understanding and reusability.
 
-## Document your software 
+## Document software 
 
 Provide clear and comprehensive documentation, including code comments, API specifications, setup guides, and usage 
 instructions, to ensure the software is easy to understand, use, and extend.
@@ -88,7 +88,7 @@ guides, can further support adoption.
 While you may not need as much documentation as a large commercial product, ensuring your code is well-documented is 
 essential for making it discoverable, reusable, and maintainable.
 
-## License your software  
+## License software  
 
 A licence is a legal document which sets down the terms under which the creator of work (such as written text,
 photographs, films, music, software code) is releasing what they have created for others to use, modify, extend or exploit.
@@ -97,7 +97,7 @@ implies that no one can reuse the software at all.
 
 Use open-source licenses (e.g., MIT, BSD) to make your code freely accessible, modifiable, and redistributable.
 
-## Share your software 
+## Share software 
 
 Openly publish your research software with proper documentation and licence in an accessible repository to promote collaboration, 
 transparency, and peer review to identify bugs, improve software correctness and quality, and promote knowledge sharing.
@@ -114,7 +114,7 @@ Some examples of commonly used software repositories and registries include:
 - programming language-specific software repositories for publishing software packages and libraries- [PyPi][pypi] (for Python) and [CRAN][cran] (for R)
 - software registries - [BioTools][biotools] (for biosciences) and [Awesome Research Software Registries][awesome-rs-registries], providing a list of research software registries (by country, organisation, domain and programming language) where research software can be registered to help promote its discovery
 
-## Use persistent identifiers for your software
+## Use persistent identifiers for software
 
 Using unique persistent identifiers, such as **Digital Object Identifiers** (DOIs) provided by [Zenodo][zenodo] or
 [FigShare][figshare], or **SoftWare Heritage persistent IDentifiers** ([SWHID](swhid)) provided by [Software Heritage][software-heritage],
@@ -128,7 +128,7 @@ allowing for automatic archiving of software repositories.
 
 These services improve the visibility, findability, citatiton and preservation of research software.
 
-## Provide citation info for your software
+## Provide citation for software
 
 Provide identification and citation information in documentation for your software (including its versions) to ensure that software can be
 properly cited in publications and research outputs.
@@ -144,7 +144,7 @@ Using `CITATION.cff` or `codemeta.json` files for software citation offers advan
 citing code, making citation information more accessible and usable by both humans and machines and 
 interoperability with various repositories. 
 
-## Build community & encourage collaboration around your software
+## Build community & encourage collaboration
 
 Foster a community and promote collaboration around your software by engaging with users, encouraging contributions, 
 and providing clear guidelines for participation. 
