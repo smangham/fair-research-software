@@ -229,7 +229,7 @@ Checking the command line terminal:
 
 Checking Python:
 
-5. `$ python3 --version`
+5. `$ python --version`
 6. `$ python3 --version`
 7. `$ which python`
 8. `$ which python3`
