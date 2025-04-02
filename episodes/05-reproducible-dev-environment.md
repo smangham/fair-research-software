@@ -394,7 +394,6 @@ Traceback (most recent call last):
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 UnicodeEncodeError: 'charmap' codec can't encode character '\x92' in position 101: character maps to <undefined>
-(spacewalks) (spacewalks)
 ```
 
 This is not what we were expecting!
