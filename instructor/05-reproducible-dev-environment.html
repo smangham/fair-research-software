@@ -820,8 +820,7 @@ all) Windows users will not. You might instead see an error like:</p>
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-UnicodeEncodeError: 'charmap' codec can't encode character '\x92' in position 101: character maps to &lt;undefined&gt;
-(spacewalks) (spacewalks)</code></pre>
+UnicodeEncodeError: 'charmap' codec can't encode character '\x92' in position 101: character maps to &lt;undefined&gt;</code></pre>
 <p>This is not what we were expecting! The problem is <em>character
 encoding</em>. ‘Standard’ Latin characters are encoded using ASCII, but
 the expanded Unicode character set covers many more. In this case, the
